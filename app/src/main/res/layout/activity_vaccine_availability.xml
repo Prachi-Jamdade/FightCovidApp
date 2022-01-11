@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:background="@color/black_shade1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VaccineAvailability">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/main_toolbar"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pinCode"
+                android:inputType="number"
+                android:layout_below="@id/toolbar"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:textSize="19sp"
+                android:textColor="@color/white"
+                android:hint="Enter Pin Code"
+                android:theme="@style/cursorColor"
+                android:fontFamily="@font/rubiklight"
+                android:padding="8dp"
+                android:background="@drawable/border_searchview"
+                android:textColorHint="@color/white"/>
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/searchBtn"
+                    android:layout_below="@+id/pinCode"
+                    android:text="Search Center"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    android:fontFamily="@font/rubikregular"
+                    android:backgroundTint="@color/yellow"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="8dp"
+                    android:textAllCaps="false"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/vaccineCenterRV"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            tools:listitem="@layout/vaccine_center_item"
+            android:layout_below="@id/searchBtn" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loadingPB"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+        <include
+            layout="@layout/nav_drawer"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

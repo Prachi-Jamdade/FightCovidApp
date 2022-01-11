@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade1"
+    tools:context=".KnowAboutVaccine">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/main_toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubikregular"
+                    android:text="\u25CF Everyone ages 5 and older can get vaccinated against COVID-19"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubikregular"
+                    android:text="@string/vaccine"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/white"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    app:civ_border_width="0.5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/vaccinated"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See for more info"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="#D3D3D3"
+                    android:layout_marginTop="12dp"
+                    android:layout_margin="2dp"
+                    android:fontFamily="@font/rubiklight"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubikregular"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:text="@string/link"
+                    android:textColor="#ADD8E6"
+                    android:layout_margin="3dp"
+                    android:autoLink="web"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/rubiksemibold"
+                    android:textColor="@color/yellow"
+                    android:text="How Vaccine Works?"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubikregular"
+                    android:padding="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/work"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/rubiksemibold"
+                    android:textColor="@color/yellow"
+                    android:text="How Vaccine Helps?"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubikregular"
+                    android:padding="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/help"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+        <include
+            layout="@layout/nav_drawer"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

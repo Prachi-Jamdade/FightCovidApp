@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">FightCovid</string>
+
+    <string name="bold" tools:ignore="ReferenceType">@font/rubiksemibold</string>
+    <string name="regular" tools:ignore="ReferenceType">@font/rubikregular</string>
+    <string name="light" tools:ignore="ReferenceType">@font/rubiklight</string>
+
+    <string name="title" tools:ignore="ReferenceType">Prevention is always Better than Cure</string>
+
+    <string name="credit1" tools:ignore="Reference Type">\u25CF <b>corona.lmao.ninja</b> for Global API.</string>
+    <string name="credit2">\u25CF <b>newsapi.org</b> for Covid Specific News.</string>
+    <string name="credit3">\u25CF <b>apisetu.gov.in</b> to show Available Vaccine Centers.</string>
+
+    <string name="tip">
+        Add years to your Life and Life to your Years just by Embracing Yoga in your Life.
+    </string>
+
+    <string name="work">
+        When a new pathogen or disease enters our body, it introduces a new antigen.
+        \nFor every new antigen, our body needs to build a specific antibody that can grab onto the antigen and defeat the pathogen.
+    </string>
+
+    <string name="help">
+        \u25CF COVID-19 vaccines are safe, including for children ages 5 through 11 years.
+        \n\u25CF COVID 19-vaccines are effective and can reduce the risk of getting and spreading the virus that causes COVID-19.
+        \n\u25CF Vaccines are highly effective at preventing hospitalization and deaths.
+    </string>
+    <string name="vaccine">
+        Vaccines are effective at preventing against severe disease, including known variants currently circulating (e.g. Delta variant)
+    </string>
+
+    <string name="link">
+        https://www.cdc.gov/coronavirus/2019-ncov/vaccines/vaccine-benefits.html
+    </string>
+
+    <string name="link2">
+        https://www.youtube.com/watch?v=SRX5qJTVZMY
+    </string>
+</resources>

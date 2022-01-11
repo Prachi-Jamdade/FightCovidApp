@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HealthTips">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_shade1"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/main_toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_above="@id/ll1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/newsIV"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:id="@+id/titleTV"
+                    android:layout_below="@id/newsIV"
+                    android:fontFamily="@font/rubiksemibold"
+                    android:textSize="20sp"
+                    android:textColor="@color/yellow"
+                    android:padding="4dp"
+                    android:layout_margin="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/subtitleTV"
+                    android:layout_below="@id/titleTV"
+                    android:text="Sub Description"
+                    android:fontFamily="@font/rubikregular"
+                    android:textSize="@dimen/text_size2"
+                    android:padding="4dp"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contentTV"
+                    android:text="Content"
+                    android:fontFamily="@font/rubikregular"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/subtitleTV"
+                    android:padding="4dp"
+                    android:layout_margin="4dp"
+                    android:textSize="@dimen/text_size2"
+                    />
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll1"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_margin="1dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/readNewsBtn"
+                android:text="Read Full News"
+                app:backgroundTint="@color/yellow"
+                android:background="@drawable/border_searchview"
+                android:textAllCaps="false"
+                android:textSize="@dimen/title_size1"
+                android:fontFamily="@font/rubikregular"
+                android:padding="4dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/shareNewsBtn"
+                app:backgroundTint="@color/yellow"
+                android:background="@drawable/border_searchview"
+                android:text="Share News"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textSize="@dimen/title_size1"
+                android:fontFamily="@font/rubikregular"
+                android:padding="4dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+        <include
+            layout="@layout/nav_drawer"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

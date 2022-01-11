@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:onClick="clickLogo"
+        android:src="@drawable/covidlogo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fight Covid"
+        android:fontFamily="@font/rubiksemibold"
+        android:textSize="@dimen/title_size2"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Vaccinated, Stay Safe"
+        android:fontFamily="@font/rubikregular"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#D3D3D3"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="clickHome">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="6dp"
+            android:paddingStart="8dp"
+            android:src="@drawable/ic_home"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Home"
+            android:fontFamily="@font/rubikregular"
+            android:textSize="@dimen/title_size1"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:layout_marginStart="9dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="clickTrackCountries">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="6dp"
+            android:paddingStart="8dp"
+            android:src="@drawable/ic_track_countries"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Track Countries"
+            android:fontFamily="@font/rubikregular"
+            android:textSize="@dimen/title_size1"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:layout_marginStart="9dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="clickVaccine">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="6dp"
+            android:paddingStart="8dp"
+            android:src="@drawable/ic_vaccine"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vaccine Availability"
+            android:fontFamily="@font/rubikregular"
+            android:textSize="@dimen/title_size1"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:layout_marginStart="9dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="clickKnow">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="6dp"
+            android:paddingStart="8dp"
+            android:src="@drawable/ic_vaccination"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Know About Vaccine"
+            android:fontFamily="@font/rubikregular"
+            android:textSize="@dimen/title_size1"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:layout_marginStart="9dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="clickNews">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="6dp"
+            android:paddingStart="8dp"
+            android:src="@drawable/ic_news"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Covid News"
+            android:textColor="@color/white"
+            android:fontFamily="@font/rubikregular"
+            android:textSize="@dimen/title_size1"
+            android:padding="8dp"
+            android:layout_marginStart="9dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="clickTips">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="6dp"
+            android:paddingStart="8dp"
+            android:src="@drawable/ic_health"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Health Tips"
+            android:fontFamily="@font/rubikregular"
+            android:textSize="@dimen/title_size1"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="clickMeasures">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="7dp"
+            android:paddingStart="10dp"
+            android:src="@drawable/ic_clean_hands"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Precautionary Measures"
+            android:textColor="#000000"
+            android:padding="12dp"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="clickAbout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="6dp"
+            android:paddingStart="8dp"
+            android:src="@drawable/ic_about"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="About"
+            android:fontFamily="@font/rubikregular"
+            android:textSize="@dimen/title_size1"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:layout_marginStart="9dp"/>
+    </LinearLayout>
+
+</LinearLayout>

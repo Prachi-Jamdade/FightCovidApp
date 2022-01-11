@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade1"
+    tools:context=".CountryListActivity"
+    android:orientation="vertical"
+    tools:ignore="ExtraText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/main_toolbar" />
+
+        <SearchView
+            android:id="@+id/searchCountry"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="textStart"
+            android:theme="@style/cursorColor"
+            android:padding="8dp"
+            android:layout_marginVertical="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:queryHint="Search Country"
+            android:textColor="@color/white"
+            android:queryBackground="@null"
+            android:background="@drawable/border_searchview"
+            android:imeOptions="actionSearch"
+            android:iconifiedByDefault="false"
+            android:inputType="text|textAutoCorrect|textCapWords|textAutoComplete"
+            android:submitBackground="@null"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:background="@drawable/border_searchview"
+            android:backgroundTint="@color/color_primary_dark"
+            app:cardCornerRadius="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow"
+                    android:layout_alignParentStart="true"
+                    android:text="Country Name"
+                    android:layout_marginStart="12dp"
+                    android:textSize="@dimen/text_size2"
+                    android:fontFamily="@string/bold">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="22dp"
+                    android:textColor="@color/yellow"
+                    android:layout_alignParentEnd="true"
+                    android:text="Total Cases"
+                    android:textSize="@dimen/text_size2"
+                    android:fontFamily="@string/bold">
+                </TextView>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/countriesRV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/countries_item" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+
+        <include
+            layout="@layout/nav_drawer"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

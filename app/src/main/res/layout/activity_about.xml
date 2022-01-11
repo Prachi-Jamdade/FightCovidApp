@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade1"
+    tools:context=".About">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/main_toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:layout_marginBottom="30dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/aboutCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="5dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="@color/black"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/collegeLogo"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/gpmlogo"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="1dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center"
+                            android:text="Government Polytechnic Mumbai"
+                            android:textColor="@color/yellow"
+                            android:fontFamily="@font/rubiksemibold"
+                            android:textSize="@dimen/title_size1"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textSize="@dimen/text_size1"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/rubikregular"
+                            android:text="An Autonomous Institute of Government of Maharashtra"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Credits :"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubiksemibold"
+                    android:textSize="@dimen/title_size1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/credit1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size2"
+                    android:fontFamily="@font/rubikregular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/credit2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size2"
+                    android:fontFamily="@font/rubikregular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/credit3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size2"
+                    android:fontFamily="@font/rubikregular"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="This App is for Information Purpose only"
+            android:textColor="#D3D3D3"
+            android:textSize="@dimen/text_size2"
+            android:fontFamily="@font/rubikregular"
+            android:layout_marginBottom="60dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+        <include
+            layout="@layout/nav_drawer"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
